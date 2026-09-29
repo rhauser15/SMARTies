@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow, noarchive" />
+<title>Marriott Bonvoy | My Account (Demo)</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- DEMO BANNER: remove the "demo" class on <body> to hide -->
+<div class="demo-ribbon">Mock site for Salesforce demo purposes only · Not affiliated with marriott.com</div>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="wordmark" href="#">
+      <span class="wm-main">Marriott</span>
+      <span class="wm-sub">BONVOY</span>
+    </a>
+    <nav class="mainnav">
+      <a href="#">Find &amp; Reserve</a>
+      <a href="#">Special Offers</a>
+      <a href="#">Vacations</a>
+      <a href="#">Our Brands</a>
+      <a href="#">Our Credit Cards</a>
+      <a href="#" id="nav-help">Help</a>
+    </nav>
+    <div class="member-chip">
+      <span class="avatar">LB</span>
+      <div>
+        <div class="member-name">Lauren</div>
+        <div class="member-tier">Platinum Elite · <span id="pts-header">142,380</span> pts</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Welcome back</p>
+    <h1>Hi Lauren, your next journey starts here.</h1>
+    <p class="hero-sub">Member #&nbsp;<strong>284 671 903</strong> · Member since 2014</p>
+  </div>
+</section>
+
+<main class="wrap grid">
+  <!-- LEFT: account summary -->
+  <section class="card status-card">
+    <h2>Elite Status</h2>
+    <div class="tier-badge">PLATINUM ELITE</div>
+    <div class="progress-block">
+      <div class="progress-label"><span>Nights this year</span><span><strong id="nights-count">47</strong> / 75 to Titanium</span></div>
+      <div class="progress"><div class="progress-fill" id="nights-bar" style="width:62.6%"></div></div>
+    </div>
+    <div class="stat-row">
+      <div><div class="stat-num" id="pts-body">142,380</div><div class="stat-lbl">Points balance</div></div>
+      <div><div class="stat-num">412</div><div class="stat-lbl">Lifetime nights</div></div>
+    </div>
+  </section>
+
+  <!-- RIGHT: recent activity -->
+  <section class="card activity-card">
+    <div class="card-head">
+      <h2>Recent Stays &amp; Activity</h2>
+      <a href="#" class="link">View all</a>
+    </div>
+    <table class="activity">
+      <thead><tr><th>Stay</th><th>Dates</th><th>Nights</th><th>Points</th></tr></thead>
+      <tbody>
+        <tr class="missing" id="row-austin">
+          <td><strong>JW Marriott Austin</strong><br/><span class="muted">Folio #JWA-558213</span></td>
+          <td>Sep 22 – 25, 2026</td>
+          <td id="austin-nights"><span class="pill pill-warn">Not credited</span></td>
+          <td id="austin-pts">—</td>
+        </tr>
+        <tr class="missing" id="row-kyoto">
+          <td><strong>The Ritz-Carlton, Kyoto</strong><br/><span class="muted">Booked via partner travel site</span></td>
+          <td>Sep 12 – 14, 2026</td>
+          <td id="kyoto-nights"><span class="pill pill-warn">Not credited</span></td>
+          <td id="kyoto-pts">—</td>
+        </tr>
+        <tr>
+          <td><strong>Sheraton Grand Chicago Riverwalk</strong><br/><span class="muted">Folio #SGC-440187</span></td>
+          <td>Aug 30 – Sep 2, 2026</td>
+          <td>3</td>
+          <td>+9,120</td>
+        </tr>
+        <tr>
+          <td><strong>W Hollywood</strong><br/><span class="muted">Folio #WHL-310552</span></td>
+          <td>Aug 14 – 16, 2026</td>
+          <td>2</td>
+          <td>+6,340</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="missing-callout">
+      <span>Missing a stay or points?</span>
+      <button class="btn btn-primary" id="open-chat-cta">Get help now</button>
+    </div>
+  </section>
+
+  <!-- Help center strip -->
+  <section class="card help-card">
+    <h2>Help Center</h2>
+    <div class="help-grid">
+      <a class="help-tile" href="#" data-open-chat><span class="ico">★</span>Missing stays &amp; points</a>
+      <a class="help-tile" href="#"><span class="ico">⇄</span>Change or cancel a reservation</a>
+      <a class="help-tile" href="#"><span class="ico">✈</span>Transfer points to airlines</a>
+      <a class="help-tile" href="#"><span class="ico">✉</span>Receipts &amp; folios</a>
+    </div>
+    <p class="muted small">Prefer to type it out? Old way: fill out the <a href="#" class="link">Missing Stay Request form</a> and wait 5–7 business days.</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">© 2026 Mock Marriott International demo · Built for a Salesforce Agentforce demonstration</div>
+</footer>
+
+<!-- ===================== AGENTFORCE CHAT (MOCK) ===================== -->
+<button class="chat-launcher" id="chat-launcher" aria-label="Chat with Bonvoy Assistant">
+  <span class="chat-launcher-dot"></span> Ask Bonvoy Assistant
+</button>
+
+<aside class="chat" id="chat" aria-live="polite">
+  <div class="chat-head">
+    <div class="chat-head-left">
+      <div class="bot-ava">B</div>
+      <div>
+        <div class="chat-title" id="chat-title">Bonvoy Assistant</div>
+        <div class="chat-sub" id="chat-sub">Powered by Agentforce · Available 24/7</div>
+      </div>
+    </div>
+    <div class="chat-head-actions">
+      <button id="chat-reset" title="Reset demo (R)">↺</button>
+      <button id="chat-close" title="Close">✕</button>
+    </div>
+  </div>
+  <div class="chat-body" id="chat-body"></div>
+  <div class="chat-suggest" id="chat-suggest"></div>
+  <form class="chat-input" id="chat-form">
+    <input id="chat-text" autocomplete="off" placeholder="Type a message…" />
+    <button type="submit" class="btn btn-primary">Send</button>
+  </form>
+</aside>
+
+<script src="config.js"></script>
+<script>
+  // Live-mode settings exist only on the presenter's machine (config.local.js is git-ignored).
+  if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) {
+    document.write('<script src="config.local.js" onerror="void 0"><\/script>');
+  }
+</script>
+<script src="app.js"></script>
+</body>
+</html>
